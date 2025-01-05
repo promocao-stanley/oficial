@@ -1,0 +1,461 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Pop-up Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.popup h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #e74c3c;
+}
+
+.popup p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.popup button {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background: #c0392b;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 2px solid #000;
+}
+
+.logo {
+    width: 120px;
+    margin: 0 auto;
+}
+
+/* Conteúdo Principal */
+.upsell {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.upsell h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.upsell p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.queue-info {
+    margin-top: 2rem;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.queue-info h2 {
+    font-size: 1.5rem;
+    color: #2980b9;
+}
+
+.queue-info p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.proceed-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: #2980b9;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.proceed-btn:hover {
+    background: #1f618d;
+}
+
+.proceed-btn span {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #000;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Barra de Progresso */
+.progress-bar-container {
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: red;
+    transition: width 0.5s, background-color 0.5s;
+}
+
+/* Legenda das Cores */
+.legend {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.notification-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2980b9;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    z-index: 1000;
+    animation: slide-in 0.5s ease, fade-out 2.5s 1s ease;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.progress-bar-container {
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: red;
+    transition: width 0.5s, background-color 0.5s;
+}
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 2px solid #000;
+}
+
+.logo {
+    width: 120px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Conteúdo Principal */
+.upsell {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.upsell h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.upsell p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.progress-bar-container {
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    max-width: 600px; /* Limita largura no desktop */
+    margin: 1rem auto;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: red; /* Inicialmente vermelho */
+    transition: width 0.5s, background-color 0.5s;
+}
+
+/* Legenda */
+.legend {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .upsell {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .upsell h1 {
+        font-size: 1.5rem;
+    }
+
+    .upsell p {
+        font-size: 0.9rem;
+    }
+
+    .progress-bar-container {
+        height: 15px; /* Menor altura em telas pequenas */
+    }
+
+    .legend {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .legend-item {
+        font-size: 0.8rem;
+    }
+}
+
+/* Número da Fila */
+#queue-number {
+    font-size: 2rem;
+    font-weight: bold;
+    transition: color 0.5s; /* Transição suave na cor */
+}
+
+/* Efeito de pulsação no número */
+.pulse {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Legenda das cores */
+.legend {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Garante bolinhas redondas */
+    border: 1px solid #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .legend {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .legend-item {
+        font-size: 0.8rem;
+    }
+
+    .legend-color {
+        width: 15px; /* Tamanho menor para telas pequenas */
+        height: 15px;
+    }
+}
+
+/* Legenda das cores */
+.legend {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    flex-wrap: wrap; /* Permite quebra automática em telas menores */
+    gap: 0.5rem; /* Espaço entre itens */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Garante bolinhas redondas */
+    border: 1px solid #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .legend {
+        flex-direction: column; /* Coloca os itens em coluna no smartphone */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .legend-item {
+        font-size: 0.8rem; /* Tamanho menor para texto */
+        gap: 0.3rem; /* Reduz o espaço entre bolinha e texto */
+    }
+
+    .legend-color {
+        width: 15px; /* Bolinhas menores em telas pequenas */
+        height: 15px;
+    }
+}
