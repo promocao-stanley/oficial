@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<script>
+!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.install=t():e.install=t()}(window,(function(){return function(e){var t={};function n(o){if(t[o])return t[o].exports;var r=t[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}return n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)n.d(o,r,function(t){return e[t]}.bind(null,r));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t,n){"use strict";var o=this&&this.__spreadArray||function(e,t,n){if(n||2===arguments.length)for(var o,r=0,i=t.length;r<i;r++)!o&&r in t||(o||(o=Array.prototype.slice.call(t,0,r)),o[r]=t[r]);return e.concat(o||Array.prototype.slice.call(t))};Object.defineProperty(t,"__esModule",{value:!0});var r=function(e,t,n){var o,i=e.createElement("script");i.type="text/javascript",i.async=!0,i.src=t,n&&(i.onerror=function(){r(e,n)});var a=e.getElementsByTagName("script")[0];null===(o=a.parentNode)||void 0===o||o.insertBefore(i,a)};!function(e,t,n){e.KwaiAnalyticsObject=n;var i=e[n]=e[n]||[];i.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];var a=function(e,t){e[t]=function(){for(var n=[],r=0;r<arguments.length;r++)n[r]=arguments[r];var i=o([t],n,!0);e.push(i)}};i.methods.forEach((function(e){a(i,e)})),i.instance=function(e){var t,n=(null===(t=i._i)||void 0===t?void 0:t[e])||[];return i.methods.forEach((function(e){a(n,e)})),n},i.load=function(e,o){var a="https://s1.kwai.net/kos/s101/nlav11187/pixel/events.js";i._i=i._i||{},i._i[e]=[],i._i[e]._u=a,i._t=i._t||{},i._t[e]=+new Date,i._o=i._o||{},i._o[e]=o||{};var c="?sdkid=".concat(e,"&lib=").concat(n);r(t,a+c,"https://s16-11187.ap4r.com/kos/s101/nlav11187/pixel/events.js"+c)}}(window,document,"kwaiq")}])}));
+</script>
+<script>
+kwaiq.load('267977257771328');
+kwaiq.page();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upsell de Entrega - Stanley</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script defer>
+        // Gerenciar cookies
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+        }
+
+        // Simulação de fila de pedidos com persistência
+        let queueNumber = getCookie('queueNumber');
+        if (!queueNumber) {
+            queueNumber = Math.floor(30000 + Math.random() * 5000); // Número inicial aleatório
+            setCookie('queueNumber', queueNumber, 7); // Gravar no cookie por 7 dias
+        }
+
+        function updateQueue() {
+    const queueDisplay = document.getElementById("queue-number");
+    const daysEstimate = document.getElementById("days-estimate");
+
+    if (queueNumber > 1) {
+        queueNumber--;
+        setCookie('queueNumber', queueNumber, 7); // Atualizar cookie
+        queueDisplay.textContent = queueNumber;
+
+        // Gradiente dinâmico da cor no número
+        const progressPercent = (30000 - queueNumber) / 30000 * 100;
+        if (progressPercent < 50) {
+            // Vermelho para laranja
+            queueDisplay.style.color = `rgb(255, ${Math.floor(progressPercent * 5.1)}, 0)`;
+        } else {
+            // Laranja para verde
+            queueDisplay.style.color = `rgb(${Math.floor(255 - (progressPercent - 50) * 5.1)}, 165, 0)`;
+        }
+
+        // Efeito de pulsação no número
+        queueDisplay.classList.add('pulse');
+        setTimeout(() => {
+            queueDisplay.classList.remove('pulse');
+        }, 300);
+
+        // Calcular estimativa de dias
+        const estimatedDays = Math.ceil(queueNumber / 1000); // Supondo 1000 entregas por dia
+        daysEstimate.textContent = `Estimativa: entrega em até ${estimatedDays} dias úteis.`;
+
+        // Mostrar notificação
+        showNotification();
+    }
+}
+
+        // Mostrar popup de notificação
+        function showNotification() {
+            const notification = document.createElement('div');
+            notification.className = 'notification-popup';
+            notification.innerHTML = `
+                <p>📦 Mais um pedido sendo embalado para envio!</p>
+            `;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000); // Remover popup após 3 segundos
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const queueDisplay = document.getElementById("queue-number");
+            queueDisplay.textContent = queueNumber;
+
+            // Atualizar barra e fila em intervalos
+            setInterval(updateQueue, 10000); // Atualiza a cada 10 segundos
+        });
+    </script>  
+</head>
+<body>
+    <!-- Pop-up de Alerta -->
+    <div id="popup-overlay" class="popup-overlay">
+        <div class="popup">
+            <h2>⚠ ATENÇÃO ⚠</h2>
+            <p>
+                Sua compra foi processada, porém estamos enfrentando congestionamento nas entregas.
+                O prazo de entrega pode ser de até <strong>30 dias úteis</strong>.
+            </p>
+            <button onclick="document.getElementById('popup-overlay').style.display='none';document.getElementById('main-content').style.display='block';">Entendi</button>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div id="main-content" style="display: none;">
+        <header class="header">
+            <img src="../img/logo.png" alt="Stanley Logo" class="logo">
+        </header>
+
+        <section id="upsell" class="upsell">
+            <h1>📦 Agilize a Entrega do Seu Pedido!</h1>
+            <p>Devido ao grande sucesso do lançamento, estamos enfrentando alta demanda.</p>
+            <p>Por apenas <strong>R$ 28,70</strong>, incluiremos seu pedido em uma transportadora especial, e você receberá o produto em até <strong>7 dias úteis</strong>.</p>
+            <p><em>Se optar por não acelerar, seu pedido já foi confirmado e você será notificado por e-mail quando for enviado.</em></p>
+
+            <!-- Fila de Pedidos -->
+            <div class="queue-info">
+                <h2>Sua compra é número: <span id="queue-number"></span></h2>
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <p id="days-estimate"></p>
+            </div>
+
+            <!-- Legenda das cores -->
+            <div class="legend">
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: red;"></span> Produto em congestionamento
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: orange;"></span> Produto perto de ser embalado
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: green;"></span> Produto enviado
+                </div>
+            </div>
+
+            <!-- Botão de Ação -->
+            <button class="proceed-btn" onclick="window.location.href='https://pay.pagamentozeroone.com/checkout/12058bd1-cce4-4ad0-8605-b83b3faee9f1?src=[UP-AD-03]';">
+                <span>🚚 PROSSEGUIR</span>
+            </button>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Stanley Brasil. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

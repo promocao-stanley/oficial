@@ -1,0 +1,231 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 2px solid #000;
+}
+
+.logo {
+    width: 120px;
+    margin: 0 auto;
+}
+
+/* Introdução */
+.intro {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(180deg, #f9f9f9, #e6e6e6);
+}
+
+.intro h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.intro-img {
+    margin-top: 1rem;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Promoção */
+.promotion {
+    text-align: center;
+    padding: 2rem;
+    margin: 1rem auto;
+    background: linear-gradient(45deg, #fff, #eee);
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.promotion h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.promotion p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.promo-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.promo-btn:hover {
+    background: #444;
+}
+
+/* Galeria de Produtos */
+.gallery .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.product-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: #444;
+}
+
+/* Destaques do Lançamento */
+.launch-highlights {
+    text-align: center;
+    padding: 2rem;
+    background: #f9f9f9;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.highlight-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Tarja "Mais Vendido" */
+.ribbon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: gold;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+}
+
+/* Botão desabilitado */
+.disabled-btn {
+    background: #ccc;
+    color: #777;
+    border: none;
+    cursor: not-allowed;
+}
+
+/* Estilo da tarja "Mais Vendido" */
+.ribbon {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: gold;
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transform: rotate(-15deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Destaque no contêiner do Produto 1 */
+.product-card:nth-child(1) {
+    position: relative;
+    border: 2px solid gold;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+    animation: pulse 2s infinite;
+}
+
+/* Animação de pulsar no Produto 1 */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+    }
+}
